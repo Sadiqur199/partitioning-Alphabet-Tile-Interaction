@@ -32,7 +32,7 @@ function Partition({ initialColor = getRandomColor() }) {
   };
 
   const removePartition = (index) => {
-    if (partitions.length <= 1) return; // Prevent removing the last partition
+    if (partitions.length <= 1) return; 
     const newPartitions = [...partitions];
     newPartitions.splice(index, 1);
     setPartitions(newPartitions);

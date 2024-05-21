@@ -7,7 +7,6 @@ const AlphabetTile = () => {
   const handleTileClick = (letter) => {
     let newString = outputString + letter;
 
-    // Replace sequences of three or more consecutive identical letters with underscores
     const regex = /(.)\1{2,}/g;
     newString = newString.replace(regex, (match) => '_'.repeat(match.length));
 
