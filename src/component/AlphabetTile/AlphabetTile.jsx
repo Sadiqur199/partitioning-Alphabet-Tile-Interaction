@@ -16,7 +16,7 @@ const AlphabetTile = () => {
 
   return (
     <div>
-            <h1 className='mt-10 font-bold text-4xl mb-5 m-10'>Alphabet Tile Interaction</h1>
+            <h1 className='mt-[100px] font-bold text-4xl mb-5 m-10'>Alphabet Tile Interaction</h1>
       <hr />
     <div className="flex flex-col items-center p-4">
       <div id="outputString" className="mb-4 p-2 text-xl border border-gray-300 w-full text-center">

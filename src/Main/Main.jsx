@@ -5,7 +5,7 @@ import Partition from '../component/Partition/Partition';
 const Main = () => {
   return (
     <div>
-      <div className='mb-[100px]'>
+      <div className='mb-[250px]'>
       <Partition ></Partition>
       </div>
       <AlphabetTile></AlphabetTile>
