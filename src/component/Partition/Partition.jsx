@@ -39,7 +39,10 @@ function Partition({ initialColor = getRandomColor() }) {
   };
 
   return (
-    <div className="flex flex-1 w-full h-full">
+    <div>
+      <h1 className='mt-5 font-bold text-4xl mb-5 m-10'>Recursive-partitioning</h1>
+      <hr />
+    <div className="flex flex-1 w-full h-full ml-10 mt-3">
       {partitions.map((partition, index) => (
         <div
           key={partition.id}
@@ -69,6 +72,7 @@ function Partition({ initialColor = getRandomColor() }) {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

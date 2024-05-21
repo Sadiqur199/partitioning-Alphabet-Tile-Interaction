@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+import Alphabet from './Alphabet';
+
+const AlphabetTile = () => {
+  const [outputString, setOutputString] = useState('');
+
+  const handleTileClick = (letter) => {
+    let newString = outputString + letter;
+
+    const regex = /(.)\1{2,}/g;
+    newString = newString.replace(regex, (match) => '_'.repeat(match.length));
+
+    setOutputString(newString);
+  };
+
+  return (
+    <div className="flex flex-col items-center p-4">
+      <div id="outputString" className="mb-4 p-2 text-xl border border-gray-300 w-full text-center">
+        {outputString}
+      </div>
+      <div className="grid grid-cols-6 gap-2">
+        {[...Array(26)].map((_, i) => {
+          const letter = String.fromCharCode(65 + i);
+          return <Alphabet key={letter} letter={letter} onClick={handleTileClick} />;
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default AlphabetTile;

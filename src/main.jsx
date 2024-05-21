@@ -5,12 +5,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Partition from "./component/Partition/Partition";
+import Main from "./Main/Main";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Partition></Partition>
+    element: <Main></Main>
   },
 ]);
 
