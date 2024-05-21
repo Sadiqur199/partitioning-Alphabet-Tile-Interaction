@@ -7,6 +7,7 @@ const AlphabetTile = () => {
   const handleTileClick = (letter) => {
     let newString = outputString + letter;
 
+    // Replace sequences of three or more consecutive identical letters with underscores
     const regex = /(.)\1{2,}/g;
     newString = newString.replace(regex, (match) => '_'.repeat(match.length));
 
@@ -21,11 +22,10 @@ const AlphabetTile = () => {
       <div className="grid grid-cols-6 gap-2">
         {[...Array(26)].map((_, i) => {
           const letter = String.fromCharCode(65 + i);
-          return <Alphabet key={letter} letter={letter} onClick={handleTileClick} />;
+          return <AlphabetTile key={letter} letter={letter} onClick={handleTileClick} />;
         })}
       </div>
     </div>
   );
 };
-
 export default AlphabetTile;
